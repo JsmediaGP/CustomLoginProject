@@ -30,8 +30,7 @@ class UserController extends Controller
         //checking if the user fill the right thing
         if($credentials->fails()){
             return Redirect::back()->withErrors($credentials);
-           //return back()->with('message', $credentials->messages());
-            
+          
         }else{
             $users = User::create([
                 'name'=>$request->name,
@@ -75,13 +74,7 @@ class UserController extends Controller
                     
                 }else{
                     return back()->with('message', 'Invalid Login Details');
-                    // if (Auth::user()->level == 1) 
-                    // {
-                    //     return redirect('/home')->withSuccess('message', 'Login Success');
-                    // }
-                
-                    // return Redirect::to('/adminhome');
-                    
+                                       
                 }
 
 

@@ -25,11 +25,7 @@ Route::get('/home', function () {
     return view('home');
 })->middleware(['auth'])->name('home');
 
-// Route::get('/adminhome', function(){
-//     return view('adminhome');
 
-// })->middleware(['auth'])->name('adminhome');
-//Route::get('/adminhome', [AdminController::class, 'adadmin'])->name('adminhome');
 
 Route::get('/register', [UserController::class, 'registration'])->name('register');
 Route::post('/register', [UserController::class, 'register'])->name('register');
